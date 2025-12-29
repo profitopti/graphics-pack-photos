@@ -1,0 +1,559 @@
+// Script File Name : C:\HerculesBIOS\nvram.txt
+// Created on 12/29/25 at 02:02:15    
+// AMISCE Utility. Ver 5.05.01.0002
+// Copyright (c) 2021 AMI. All rights reserved.
+
+HIICrc32=
+
+Setup Question	= Native ASPM
+Help String	= Enabled - OS Controlled ASPM, Disabled - BIOS Controlled ASPM
+Token	=227	// Do NOT change this line
+Offset	=57
+Width	=01
+BIOS Default	=[00]Disabled 
+Options	=[02]Auto	// Move "*" to the desired Option
+         [01]Enabled
+         *[00]Disabled
+
+Setup Question	= ACPI Debug
+Help String	= Open a memory buffer for storing debug strings. Reenter SETUP after enabling to see the buffer address. Use method ADBG to write strings to buffer.
+Token	=229	// Do NOT change this line
+Offset	=59
+Width	=01
+BIOS Default	=[00]Disabled 
+Options	=*[00]Disabled	// Move "*" to the desired Option
+         [01]Enabled
+
+Setup Question	= ACPI Sleep State
+Help String	= Select the highest ACPI sleep state the system will enter when the SUSPEND button is pressed.
+Token	=717	// Do NOT change this line
+Offset	=BF4
+Width	=02
+BIOS Default	=[02]S3 (Suspend to RAM) 
+Options	=*[00]Suspend Disabled	// Move "*" to the desired Option
+         [02]S3 (Suspend to RAM)
+
+Setup Question	= Low Power S0 Idle Capability
+Help String	= This variable determines if we enable ACPI Lower Power S0 Idle Capability (Mutually exclusive with Smart connect). While this is enabled, it also disable 8254 timer for SLP_S0 support.
+Token	=22B	// Do NOT change this line
+Offset	=61
+Width	=01
+BIOS Default	=[00]Disabled 
+Options	=*[00]Disabled	// Move "*" to the desired Option
+         [01]Enabled
+
+Setup Question	= PUIS Enable
+Help String	= Enable/Disable Power-Up In Standby (PUIS) feature set allows devices to be powered-up into the Standby power management state to minimize inrush current at power-up and to allow the host to sequence the spin-up of devices.   
+Token	=22C	// Do NOT change this line
+Offset	=894
+Width	=01
+BIOS Default	=[00]Disabled 
+Options	=[01]Enabled	// Move "*" to the desired Option
+         *[00]Disabled
+
+Setup Question	= EC Notification
+Help String	= Sends EC notification of Low Power S0 Idle State
+Token	=22D	// Do NOT change this line
+Offset	=76
+Width	=01
+BIOS Default	=[01]Enabled 
+Options	=*[00]Disabled	// Move "*" to the desired Option
+         [01]Enabled
+
+Setup Question	= EC CS Debug Light
+Help String	= When EC enters Low Power S0 Idle State, the CAPS LOCK light will be turned on
+Token	=271A	// Do NOT change this line
+Offset	=77
+Width	=01
+BIOS Default	=[00]Disabled 
+Options	=*[00]Disabled	// Move "*" to the desired Option
+         [01]Enabled
+
+Setup Question	= EC Low Power Mode
+Help String	= This option controls whether EC will go to Low power mode during Low Power S0 Idle State
+Token	=22E	// Do NOT change this line
+Offset	=78
+Width	=01
+BIOS Default	=[01]Enabled 
+Options	=*[00]Disabled	// Move "*" to the desired Option
+         [01]Enabled
+
+Setup Question	= Sensor Standby
+Help String	= Enable/Disable Sensor standby mode
+Token	=22F	// Do NOT change this line
+Offset	=7D
+Width	=01
+BIOS Default	=[00]Disabled 
+Options	=*[00]Disabled	// Move "*" to the desired Option
+         [01]Enabled
+
+Setup Question	= CS PL1 Limit
+Help String	= Limit PL1 (Power Limit 1) while in Connected Standby
+Token	=230	// Do NOT change this line
+Offset	=7E
+Width	=01
+BIOS Default	=[00]Disabled 
+Options	=*[00]Disabled	// Move "*" to the desired Option
+         [01]Enabled
+
+Setup Question	= PCI Delay Optimization
+Help String	= Experimental ACPI additions for FW latency optimizations
+Token	=234	// Do NOT change this line
+Offset	=5E
+Width	=01
+BIOS Default	=[00]Disabled 
+Options	=[00]Disabled	// Move "*" to the desired Option
+         *[01]Enabled
+
+Setup Question	= MSI enabled
+Help String	= When disabled, MSI support is disabled in FADT
+Token	=235	// Do NOT change this line
+Offset	=7CC
+Width	=01
+BIOS Default	=[01]Enabled 
+Options	=[00]Disabled	// Move "*" to the desired Option
+         *[01]Enabled
+
+Setup Question	= C6DRAM
+Help String	= Enable/Disable moving of DRAM contents to PRM memory when CPU is in C6 state
+Token	=2721	// Do NOT change this line
+Offset	=114
+Width	=01
+BIOS Default	=[01]Enabled 
+Options	=*[00]Disabled	// Move "*" to the desired Option
+         [01]Enabled
+
+Setup Question	= PECI
+Help String	= Enable/Disable PECI
+Token	=3C0	// Do NOT change this line
+Offset	=04
+Width	=01
+BIOS Default	=[01]Enabled 
+Options	=*[00]Disabled	// Move "*" to the desired Option
+         [01]Enabled
+
+Setup Question	= BIST
+Help String	= Enable/Disable BIST (Built-In Self Test) on reset
+Token	=3C5	// Do NOT change this line
+Offset	=07
+Width	=01
+BIOS Default	=[00]Disabled 
+Options	=*[00]Disabled	// Move "*" to the desired Option
+         [01]Enabled
+
+Setup Question	= AP threads Idle Manner
+Help String	= AP threads Idle Manner for waiting signal to run
+Token	=3C6	// Do NOT change this line
+Offset	=120
+Width	=01
+BIOS Default	=[02]MWAIT Loop 
+Options	=[01]HALT Loop	// Move "*" to the desired Option
+         [02]MWAIT Loop
+         *[03]RUN Loop
+
+Setup Question	= Intel(R) Speed Shift Technology Interrupt Control
+Help String	= Enable/Disable Intel(R) Speed Shift Technology Interrupts
+Token	=3D6	// Do NOT change this line
+Offset	=20C
+Width	=01
+BIOS Default	=[01]Enabled 
+Options	=*[00]Disabled	// Move "*" to the desired Option
+         [01]Enabled
+
+Setup Question	= Boot performance mode
+Help String	= Select the performance state that the BIOS will set starting from reset vector.
+Token	=2728	// Do NOT change this line
+Offset	=13
+Width	=01
+BIOS Default	=[01]Max Non-Turbo Performance 
+Options	=[00]Max Battery	// Move "*" to the desired Option
+         [01]Max Non-Turbo Performance
+         *[02]Turbo Performance
+
+Setup Question	= CPU EIST Function
+Help String	= Intels EIST technology dynamically and effectively reduces the CPU Vcore and the CPU frequency to decrease the average power consumption and heat production.
+Token	=8C	// Do NOT change this line
+Offset	=D39
+Width	=01
+BIOS Default	=[00]Auto 
+Options	=[00]Auto	// Move "*" to the desired Option
+         *[01]Disabled
+         [02]Enabled
+
+Setup Question	= Race To Halt (RTH)
+Help String	= Enable/Disable Race To Halt feature. RTH will dynamically increase CPU frequency in order to enter pkg C-State faster to reduce overall power.
+Token	=8D	// Do NOT change this line
+Offset	=D3D
+Width	=01
+BIOS Default	=[00]Auto 
+Options	=[00]Auto	// Move "*" to the desired Option
+         *[01]Disabled
+         [02]Enabled
+
+Setup Question	= Race To Halt (RTH)
+Help String	= Enable/Disable Race To Halt feature. RTH will dynamically increase CPU frequency in order to enter pkg C-State faster to reduce overall power. (RTH is controlled through MSR 1FC bit 20)
+Token	=3D7	// Do NOT change this line
+Offset	=0A
+Width	=01
+BIOS Default	=[00]Disabled 
+Options	=*[00]Disabled	// Move "*" to the desired Option
+         [01]Enabled
+
+Setup Question	=   Enhanced C-states
+Help String	= Enable/Disable C1E. When enabled, CPU will switch to minimum speed when all cores enter C-State.
+Token	=3EB	// Do NOT change this line
+Offset	=15
+Width	=01
+BIOS Default	=[01]Enabled 
+Options	=*[00]Disabled	// Move "*" to the desired Option
+         [01]Enabled
+
+Setup Question	=   C-State Auto Demotion
+Help String	= Configure C-State Auto Demotion
+Token	=3EC	// Do NOT change this line
+Offset	=3E
+Width	=01
+BIOS Default	=[01]C1 
+Options	=*[00]Disabled	// Move "*" to the desired Option
+         [01]C1
+
+Setup Question	=   C-State Un-demotion
+Help String	= Configure C-State Un-demotion
+Token	=3ED	// Do NOT change this line
+Offset	=3F
+Width	=01
+BIOS Default	=[01]C1 
+Options	=*[00]Disabled	// Move "*" to the desired Option
+         [01]C1
+
+Setup Question	=   Package C-State Demotion
+Help String	=   Package C-State Demotion
+Token	=3EE	// Do NOT change this line
+Offset	=40
+Width	=01
+BIOS Default	=[01]Enabled 
+Options	=*[00]Disabled	// Move "*" to the desired Option
+         [01]Enabled
+
+Setup Question	=   Package C-State Un-demotion
+Help String	=   Package C-State Un-demotion
+Token	=3EF	// Do NOT change this line
+Offset	=41
+Width	=01
+BIOS Default	=[01]Enabled 
+Options	=*[00]Disabled	// Move "*" to the desired Option
+         [01]Enabled
+
+Setup Question	= CState Pre-Wake
+Help String	= Disable - Sets bit 30 of POWER_CTL MSR(0x1FC) to 1 to disable the Cstate Pre-Wake
+Token	=3F0	// Do NOT change this line
+Offset	=3D
+Width	=01
+BIOS Default	=[01]Enabled 
+Options	=*[00]Disabled	// Move "*" to the desired Option
+         [01]Enabled
+
+Setup Question	= Package C State Limit
+Help String	= Maximum Package C State Limit Setting. Cpu Default: Leaves to Factory default value.Auto: Initializes to deepest available Package C State Limit.
+Token	=3F2	// Do NOT change this line
+Offset	=4B
+Width	=01
+BIOS Default	=[FF]Auto 
+Options	=*[00]C0/C1	// Move "*" to the desired Option
+         [01]C2
+         [02]C3
+         [03]C6
+         [04]C7
+         [05]C7S
+         [06]C8
+         [07]C9
+         [08]C10
+         [FE]Cpu Default
+         [FF]Auto
+
+Setup Question	= Interrupt Redirection Mode Selection
+Help String	= Interrupt Redirection Mode Select for Logical Interrupts 
+Token	=3FE	// Do NOT change this line
+Offset	=49
+Width	=01
+BIOS Default	=[00]Fixed Priority 
+Options	=[00]Fixed Priority	// Move "*" to the desired Option
+         *[01]Round robin
+         [02]Hash Vector
+         [07]No Change
+
+Setup Question	= Energy Efficient P-state
+Help String	= Enable/Disable Energy Efficient P-state feature. When set to 0, will disable access to ENERGY_PERFORMANCE_BIAS MSR and CPUID Function 6 ECX[3] will read 0 indicating no support for Energy Efficient policy setting. When set to 1 will enable access to ENERGY_PERFORMANCE_BIAS MSR 1B0h and CPUID Function 6 ECX[3] will read 1 indicating Energy Efficient policy setting is supported.
+Token	=446	// Do NOT change this line
+Offset	=3C
+Width	=01
+BIOS Default	=[01]Enabled 
+Options	=*[00]Disabled	// Move "*" to the desired Option
+         [01]Enabled
+
+Setup Question	= Energy Efficient Turbo
+Help String	= Enable/Disable Energy Efficient Turbo Feature. This feature will opportunistically lower the turbo frequency to increase efficiency. Recommended only to disable in overclocking situations where turbo frequency must remain constant. Otherwise, leave enabled.
+Token	=44D	// Do NOT change this line
+Offset	=1D5
+Width	=01
+BIOS Default	=[01]Enabled 
+Options	=*[00]Disabled	// Move "*" to the desired Option
+         [01]Enabled
+
+Setup Question	= Bi-directional PROCHOT#
+Help String	= When a processor thermal sensor trips (either core), the PROCHOT# will be driven.  If bi-direction is enabled, external agents can drive PROCHOT# to throttle the processor.
+Token	=4EA	// Do NOT change this line
+Offset	=7A
+Width	=01
+BIOS Default	=[01]Enabled 
+Options	=*[00]Disabled	// Move "*" to the desired Option
+         [01]Enabled
+
+Setup Question	= Disable PROCHOT# Output
+Help String	= Enable/Disable PROCHOT# Output
+Token	=4EB	// Do NOT change this line
+Offset	=7B
+Width	=01
+BIOS Default	=[01]Enabled 
+Options	=[00]Disabled	// Move "*" to the desired Option
+         *[01]Enabled
+
+Setup Question	= PROCHOT Response
+Help String	= Enable/Disable PROCHOT Response
+Token	=4ED	// Do NOT change this line
+Offset	=7E
+Width	=01
+BIOS Default	=[01]Enabled 
+Options	=*[00]Disabled	// Move "*" to the desired Option
+         [01]Enabled
+
+Setup Question	= PROCHOT Lock 
+Help String	= Enable/Disable PROCHOT Lock
+Token	=4EE	// Do NOT change this line
+Offset	=7D
+Width	=01
+BIOS Default	=[01]Enabled 
+Options	=*[00]Disabled	// Move "*" to the desired Option
+         [01]Enabled
+
+Setup Question	= Power Loss Notification Feature
+Help String	= Enable/Disable Power Loss Notification Feature
+Token	=52C	// Do NOT change this line
+Offset	=AC4
+Width	=01
+BIOS Default	=[02]Default 
+Options	=*[00]Disabled	// Move "*" to the desired Option
+         [01]Enabled
+         [02]Default
+
+Setup Question	= P-state Capping
+Help String	= Set _PPC and send ACPI notification
+Token	=553	// Do NOT change this line
+Offset	=733
+Width	=01
+BIOS Default	=[00]Disabled 
+Options	=*[00]Disabled	// Move "*" to the desired Option
+         [01]Enabled
+
+Setup Question	= ZPODD
+Help String	= Zero Power ODD option is applicable only for the board with ZPODD support.
+Token	=556	// Do NOT change this line
+Offset	=735
+Width	=01
+BIOS Default	=[00]Disabled 
+Options	=*[00]Disabled	// Move "*" to the desired Option
+         [01]Enabled
+
+Setup Question	= BCLK Aware Adaptive Voltage
+Help String	= BCLK Aware Adaptive Voltage enable/disable. When enabled, pcode will be aware of the BCLK frequency when calculating the CPU V/F curves. This is ideal for BCLK OC to avoid high voltage overrides. Uses OC Mailbox command 0x15.
+Token	=5A5	// Do NOT change this line
+Offset	=20D
+Width	=01
+BIOS Default	=[01]Enabled 
+Options	=*[00]Disabled	// Move "*" to the desired Option
+         [01]Enabled
+
+Setup Question	= Ring Down Bin
+Help String	= Enable/Disable Ring Downbin feature. Enabled - CPU will down bin the ring ratio, which means the requested max ring ratio will not be observed. Disable - CPU will not down bin the ring ratio and the requested ring ratio limit will be observed. Default for Overclocking is "Disabled" to allow for a predictable ring ratio. Uses OC mailbox command 0x19.
+Token	=633	// Do NOT change this line
+Offset	=1E8
+Width	=01
+BIOS Default	=[01]Enabled 
+Options	=*[00]Disabled	// Move "*" to the desired Option
+         [01]Enabled
+
+Setup Question	= LTR Mechanism Enable
+Help String	= If supported by hardware and set to 'Enabled', this enables the Latency Tolerance Reporting (LTR) Mechanism.
+Token	=73C	// Do NOT change this line
+Offset	=111A
+Width	=01
+BIOS Default	=[00]Disabled 
+Options	=*[00]Disabled	// Move "*" to the desired Option
+         [01]Enabled
+
+Setup Question	= LTR
+Help String	= PCIE Latency Reporting Enable/Disable
+Token	=7A1	// Do NOT change this line
+Offset	=CA
+Width	=01
+BIOS Default	=[01]Enabled 
+Options	=*[00]Disabled	// Move "*" to the desired Option
+         [01]Enabled
+
+Setup Question	= JTAG C10 Power Gate
+Help String	= When Enabled, JTAG is power gated in C10 state. When Disabled, keeps the JTAG power up during C10 and deeper power states for debug purpose. 
+Token	=6E1	// Do NOT change this line
+Offset	=08
+Width	=01
+BIOS Default	=[00]Enabled 
+Options	=*[01]Disabled	// Move "*" to the desired Option
+         [00]Enabled
+
+Setup Question	= Re-Size BAR Support
+Help String	= If system has Resizable BAR capable PCIe Devices, this option Enables or Disables Resizable BAR Support.
+Token	=2B71	// Do NOT change this line
+Offset	=1100
+Width	=01
+BIOS Default	=[00]Disabled 
+Options	=[00]Disabled	// Move "*" to the desired Option
+         *[01]Enabled
+
+Setup Question	= Clock Power Management
+Help String	= If supported by hardware and set to 'Enabled', the device is permitted to use CLKREQ# signal for power management of Link clock in accordance to protocol defined in appropriate form factor specification.
+Token	=73F	// Do NOT change this line
+Offset	=111E
+Width	=01
+BIOS Default	=[00]Disabled 
+Options	=*[00]Disabled	// Move "*" to the desired Option
+         [01]Enabled
+
+Setup Question	= DMI Link ASPM Control
+Help String	= The control of Active State Power Management of the DMI Link.
+Token	=27CF	// Do NOT change this line
+Offset	=517
+Width	=01
+BIOS Default	=[02]L1 
+Options	=*[00]Disabled	// Move "*" to the desired Option
+         [02]L1
+         [04]Auto
+
+Setup Question	= RC6(Render Standby)
+Help String	= Check to enable render standby support.
+Token	=8CA	// Do NOT change this line
+Offset	=2E
+Width	=01
+BIOS Default	=[01]Enabled 
+Options	=*[00]Disabled	// Move "*" to the desired Option
+         [01]Enabled
+
+Setup Question	= DDR PowerDown and idle counter
+Help String	= BIOS: BIOS is in control of DDR CKE mode and idle timer value. PCODE: pcode will manage the modes.
+Token	=911	// Do NOT change this line
+Offset	=21F
+Width	=01
+BIOS Default	=[01]BIOS 
+Options	=*[00]PCODE	// Move "*" to the desired Option
+         [01]BIOS
+
+Setup Question	= For LPDDR Only: DDR PowerDown and idle counter
+Help String	= For LPDDR Only: BIOS: BIOS is in control of DDR CKE mode and idle timer value. PCODE: pcode will manage the modes.
+Token	=912	// Do NOT change this line
+Offset	=220
+Width	=01
+BIOS Default	=[01]BIOS 
+Options	=*[00]PCODE	// Move "*" to the desired Option
+         [01]BIOS
+
+Setup Question	= PCI Express Clock Gating
+Help String	= PCI Express Clock Gating Enable/Disable for each root port.
+Token	=2795	// Do NOT change this line
+Offset	=2A5
+Width	=01
+BIOS Default	=[01]Enabled 
+Options	=*[00]Disabled	// Move "*" to the desired Option
+         [01]Enabled
+
+Setup Question	= PCI Express Power Gating
+Help String	= PCI Express Power Gating Enable/Disable for each root port.
+Token	=BD1	// Do NOT change this line
+Offset	=2A9
+Width	=01
+BIOS Default	=[01]Enabled 
+Options	=*[00]Disabled	// Move "*" to the desired Option
+         [01]Enabled
+
+Setup Question	= L1 Substates
+Help String	= PCI Express L1 Substates settings.L1SS cannot be enabled when CLKREQMSG is disabled
+Token	=2797	// Do NOT change this line
+Offset	=37D
+Width	=01
+BIOS Default	=[02]L1.1 & L1.2 
+Options	=*[00]Disabled	// Move "*" to the desired Option
+         [01]L1.1
+         [02]L1.1 & L1.2
+
+Setup Question	= LAN Wake From DeepSx
+Help String	= Wake from DeepSx by the assertion of LAN_WAKE# pin
+Token	=C5B	// Do NOT change this line
+Offset	=05
+Width	=01
+BIOS Default	=[01]Enabled 
+Options	=[01]Enabled	// Move "*" to the desired Option
+         *[00]Disabled
+
+Setup Question	= Legacy IO Low Latency
+Help String	= Set to enable low latency of legacy IO. Some systems require lower IO latency irrespective of power. This is a tradeoff between power and IO latency.
+Token	=27CE	// Do NOT change this line
+Offset	=76F
+Width	=01
+BIOS Default	=[00]Disabled 
+Options	=[00]Disabled	// Move "*" to the desired Option
+         *[01]Enabled
+
+Setup Question	= PCH Cross Throttling
+Help String	= Enable/Disable the PCH Cross Throttling feature. Only ULT support this feature.
+Token	=C6A	// Do NOT change this line
+Offset	=6BE
+Width	=01
+BIOS Default	=[01]Enabled 
+Options	=*[00]Disabled	// Move "*" to the desired Option
+         [01]Enabled
+
+Setup Question	= Enable 8254 Clock Gate
+Help String	= Enables/Disables 8254 clock gate in early phase. Set 8254CGE is necessary for SLP_S0 support. Platform is albe to disable this policy and set 8254CGE in late phase.
+Token	=79A	// Do NOT change this line
+Offset	=6BD
+Width	=01
+BIOS Default	=[00]Disabled 
+Options	=*[00]Disabled	// Move "*" to the desired Option
+         [01]Enabled
+         [02]Enabled In Runtime and S3 Resume
+
+Setup Question	= Aggressive LPM Support
+Help String	= Enable PCH to aggressively enter link power state.
+Token	=781	// Do NOT change this line
+Offset	=92
+Width	=01
+BIOS Default	=[00]Disabled 
+Options	=*[00]Disabled	// Move "*" to the desired Option
+         [01]Enabled
+
+Setup Question	= Power Down Mode
+Help String	= CKE Power Down Mode Control
+Token	=276D	// Do NOT change this line
+Offset	=1A2
+Width	=01
+BIOS Default	=[FF]Auto 
+Options	=[FF]Auto	// Move "*" to the desired Option
+         *[00]No Power Down
+         [01]APD
+         [06]PPD-DLLoff
+
+Setup Question	= Thermal Throttling Level
+Help String	= Determine if use Intel suggested setting
+Token	=1220	// Do NOT change this line
+Offset	=717
+Width	=01
+BIOS Default	=[01]Suggested Setting 
+Options	=[01]Suggested Setting	// Move "*" to the desired Option
+         *[00]Manual
